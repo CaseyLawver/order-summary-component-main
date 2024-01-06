@@ -1,16 +1,20 @@
 * {
     font-family: 'Red Hat Display', sans-serif;
-    color: hsl(224, 23%, 55%);
     text-align: center;
     margin: 0;
     box-sizing: border-box;
 }
 
-.home {
-    background-image: url("images/pattern-background-desktop.svg"), url("images/illustration-hero.svg");
-    background-repeat: no-repeat, no-repeat;
-    background-size: 50% 100%;
-    background-position: left top, right top;
+body {
+    background-color: hsl(225, 100%, 94%);
+    background-image: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -31,7 +35,6 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    background-color: hsl(225, 100%, 94%);
     height: 100vh;
     width: 100vw;
 }
@@ -43,7 +46,7 @@ main {
     align-items: center;
     background-color: white;
     max-width: 77%;
-    height: 80%;
+    padding-bottom: 25px;
     border-radius: 16px;
     overflow: hidden;
     gap: 1rem;
@@ -60,19 +63,24 @@ main {
     margin-right: 1rem;
     font-size: .95rem;
     line-height: 160%;
+    color:  gray;
 }
 
 .annual-plan {
     display: flex;
-    background-color: rgb(247, 243, 243);
+    background-color: rgb(247 243 243);
     border-radius: 10px;
     font-size: .85rem;
-    width: 63vw;
+    width: 238px;
     flex-wrap: wrap;
     overflow: hidden;
     justify-content: space-around;
     margin-bottom: 5px;
     padding: 5px 0;
+}
+
+.annual-plan p:nth-of-type(2) {
+    color: gray;
 }
 
 .annual-plan-left {
@@ -90,7 +98,7 @@ main {
 }
 
 .plan-details{
-padding: 10px 10px;
+    padding: 10px 10px;
 }
 
 
@@ -101,8 +109,8 @@ padding: 10px 10px;
 }
 
 .title{
-font-weight: 700;
-color: darkblue;
+    font-weight: 700;
+    color: hsl(223, 47%, 23%);
 }
 
 span{
@@ -112,18 +120,39 @@ span{
     color: hsl(245, 75%, 52%);
 }
 
+span:hover{
+    color:  hsla(245, 75%, 52%, 0.733);
+}
+
 .checkout {
     background-color: hsl(245, 75%, 52%);
     color: white;
     border: none;
     border-radius: 7px;
-    padding: 10px 40px;
-    font-size: 1rem;
+    padding: 12px 55px;
+    font-size: .80rem;
     font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.checkout:hover {
+    background-color: hsla(245, 75%, 52%, 0.712);
 }
 
 .cancel {
     border: none;
     background-color: white;
     font-weight: 900;
+    color: gray;
+}
+
+.cancel:hover{
+
+    color: hsl(223, 47%, 23%);
+}
+
+@media only screen and (min-width: 540px){
+    .container {
+        max-width: 350px;
+    }
 }
